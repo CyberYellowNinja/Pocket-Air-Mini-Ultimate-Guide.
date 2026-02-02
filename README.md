@@ -111,6 +111,7 @@ Open RetroArch and grant permissions.
 ### **7. MelonDS (DS) & Mupen64Plus FZ (N64)**
 * **MelonDS:** Set Resolution to **2x/3x**. Map Screen Swap to **L3**.
 * **Mupen64Plus FZ:** Use **GLideN64-Very-Accurate** profile. Map **C-Buttons** to the **Right Analog Stick**.
+
 ## 🎨 Phase 6: ES-DE Advanced Setup & Scraping
 
 Make your collection look professional and set ES-DE as your permanent home.
@@ -145,7 +146,7 @@ Go to **Settings > System > Developer Options**:
 
 ---
 
-### Phase 8: The Dark Arts (System Debloating)
+### 🥷 Phase 8: The Dark Arts (System Debloating)
 This stage will disable unnecessary system background processes to free up RAM and CPU cycles. We will use **Shizuku**, **QuickEdit**, and **Termux**.
 
 #### 1. Setup Shizuku
@@ -161,22 +162,22 @@ This stage will disable unnecessary system background processes to free up RAM a
 2. Save the files to your SD card in a folder named `Ter` (e.g., `SD Card > Ter`).
 3. Open **QuickEdit** and grant the necessary permissions.
 4. Tap the three lines (menu) and navigate to `SD Card > Ter > rish`.
-5. On **Line 24**, find the variable `"PKG"` and change it to:
-   `"com.termux"`
+5. On **Line 24**, find the variable `PKG=""` and change it to:
+   `PKG="com.termux"`
 6. Tap the **Disk icon** (Save) and then the **X** to close the file.
 7. Restart Shizuku to apply changes and ensure Wireless Debugging is still active.
-8. In Shizuku, go to **Authorized applications** and enable **Termux**.
 
 #### 3. Run the Debloater in Termux
 1. Open **Termux**.
 2. Type `cd /storage` and press **Enter**.
-3. Type `ls` and press **Enter**. You will see a series of numbers (e.g., `1234-ABCD`) which is your SD card's ID.
-4. Navigate to your folder by typing (replace `1234-ABCD` with your ID):
+3. Type `ls` and press **Enter**. Note your SD card's ID (e.g., `1234-ABCD`).
+4. Navigate to your folder (replace `1234-ABCD` with your ID):
    `cd /storage/1234-ABCD/Ter`
 5. Run the rish script by typing:
    `sh rish`
-   *Press Enter and grant Shizuku access if prompted.*
-6. Now, **Copy and Paste** the following block of commands into Termux to disable the bloatware:
+6. **IMPORTANT:** A Shizuku prompt will appear. Tap **"Allow all the time"**. 
+   *(Now Termux will officially show up in Shizuku's "Authorized applications" list).*
+7. After granting permission, **Copy and Paste** the following block to disable the bloatware:
 
 ```bash
 pm disable-user --user 0 com.android.dreams.basic
@@ -194,15 +195,20 @@ pm disable-user --user 0 com.mediatek.mtklogger
 pm disable-user --user 0 com.mediatek.gnssdebugreport
 pm disable-user --user 0 com.mediatek.batterywarning
 ```
-7. **Restart your device.** The process is complete!
+8. **​Restart your device. You will notice improved battery life and more stable performance due to reduced background CPU activity.
 
 
 
 ### 💡 Pro Tip: Speed up ES-DE Startup
+
+1. Go to **UI Settings** > **Theme Configuration**.
+2. Set **Enable Theme Variant Triggers** to **Off**.
+   
 If your collection is massive and you want ES-DE to open instantly, you can disable the automatic startup scan:
 
 1. Go to **ES-DE Menu** > **Other Settings**.
 2. Set **Only show games from gamelist** to **On**.
+   
 
 > [!NOTE]
 > If you add new games later, you must manually scan via **Menu** > **Utilities** > **Rescan ROM Directory**.
