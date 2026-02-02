@@ -165,7 +165,7 @@ This stage will disable unnecessary system background processes to free up RAM a
 5. On **Line 24**, find the variable `"PKG"` and change it to:
    `"com.termux"`
 6. Tap the **Disk icon** (Save) and then the **X** to close the file.
-7. Restart Shizuku to apply changes and ensure Wireless Debugging is still active.
+
 
 #### 3. Run the Debloater in Termux
 1. Open **Termux**.
