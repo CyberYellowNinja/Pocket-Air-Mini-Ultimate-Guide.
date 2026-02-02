@@ -178,6 +178,13 @@ pm disable-user --user 0 com.mediatek.batterywarning
 
 4. **Restart your device.** Your PAM is now cleaner and faster than ever!
 
+## ⚠️ Disclaimer
+
+This guide is for educational purposes only. 
+* **Risk:** Modifying system settings, debloating, or using third-party software carries risks. I am not responsible for any damage to your device, software "bricking," or loss of data. Proceed at your own risk.
+* **Copyright:** This guide does not provide, host, or link directly to copyrighted ROMs or BIOS files. Emulation is a complex legal area; ensure you own physical copies of the games you emulate and comply with your local laws.
+* **Trademarks:** All product names, logos, and brands (Ayaneo, Nintendo, Sony, etc.) are property of their respective owners.
+
 
 
 ### ☕ Final Support
