@@ -173,11 +173,13 @@ This stage will disable unnecessary system background processes to free up RAM a
 3. Type `ls` and press **Enter**. Note your SD card's ID (e.g., `1234-ABCD`).
 4. Navigate to your folder (replace `1234-ABCD` with your ID):
    `cd /storage/1234-ABCD/Ter`
-5. Run the rish script by typing:
+ 5. Type `termux-setup-storage`
+   alow access 
+6. Run the rish script by typing:
    `sh rish`
-6. **IMPORTANT:** A Shizuku prompt will appear. Tap **"Allow all the time"**. 
+7. **IMPORTANT:** A Shizuku prompt will appear. Tap **"Allow all the time"**. 
    *(Now Termux will officially show up in Shizuku's "Authorized applications" list).*
-7. After granting permission, **Copy and Paste** the following block to disable the bloatware:
+8. After granting permission, **Copy and Paste** the following block to disable the bloatware:
 
 ```bash
 pm disable-user --user 0 com.android.dreams.basic
@@ -195,7 +197,7 @@ pm disable-user --user 0 com.mediatek.mtklogger
 pm disable-user --user 0 com.mediatek.gnssdebugreport
 pm disable-user --user 0 com.mediatek.batterywarning
 ```
-8. **​Restart your device. You will notice improved battery life and more stable performance due to reduced background CPU activity.**
+9. **​Restart your device. You will notice improved battery life and more stable performance due to reduced background CPU activity.**
 
 
 
