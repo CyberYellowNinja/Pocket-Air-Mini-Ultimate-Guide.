@@ -174,7 +174,7 @@ This stage will disable unnecessary system background processes to free up RAM a
 4. Navigate to your folder (replace `1234-ABCD` with your ID):
    `cd /storage/1234-ABCD/Ter`
  5. Type `termux-setup-storage`
-   alow access 
+   allow access 
 6. Run the rish script by typing:
    `sh rish`
 7. **IMPORTANT:** A Shizuku prompt will appear. Tap **"Allow all the time"**. 
