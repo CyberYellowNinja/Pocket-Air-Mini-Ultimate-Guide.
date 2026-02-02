@@ -173,10 +173,12 @@ pm disable-user --user 0 com.google.android.ims
 pm disable-user --user 0 com.mediatek.engineermode
 pm disable-user --user 0 com.mediatek.mtklogger
 pm disable-user --user 0 com.mediatek.gnssdebugreport
-pm disable-user --user 0 com.mediatek.batterywarning ```
+pm disable-user --user 0 com.mediatek.batterywarning
+```
+
 4. **Restart your device.** Your PAM is now cleaner and faster than ever!
 
----
+
 
 ### ☕ Final Support
 If this "Zero to Hero" guide helped you build the perfect handheld, consider supporting my work!
