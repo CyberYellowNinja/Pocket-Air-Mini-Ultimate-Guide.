@@ -145,18 +145,38 @@ Go to **Settings > System > Developer Options**:
 
 ---
 
-## 🌑 Phase 8: The Dark Arts (Advanced Debloating)
+### Phase 8: The Dark Arts (System Debloating)
+This stage will disable unnecessary system background processes to free up RAM and CPU cycles. We will use **Shizuku**, **QuickEdit**, and **Termux**.
 
-Free up RAM and CPU cycles by disabling hidden background services using **Shizuku** and **Termux**.
+#### 1. Setup Shizuku
+1. Open **Shizuku**.
+2. Tap **Start via Wireless Debugging**.
+3. Go to **Developer Options** > Enable **Wireless Debugging** > Tap **Allow**.
+4. Tap on the "Wireless Debugging" text, then **Pair device with pairing code**.
+5. Enter the code into the Shizuku notification to pair.
+6. Go back to Shizuku and tap **Start**. You should see "Shizuku is running".
 
-1. **Shizuku:** Start via **Wireless Debugging**. Export files to `SD Card/Ter`.
-2. **Rish Script:** Open `SD Card/Ter/rish` with **QuickEdit**. 
-   * On **Line 24**, change the PKG value to: `"com.termux"`.
-3. **Termux execution:**
-   * Open Termux. Type: `cd /storage`, then `ls` to find your SD ID (e.g., `0123-4567`).
-   * Type: `cd /storage/YOUR-ID-HERE/Ter`.
-   * Type: `sh rish` and press Enter.
-   * **Paste the following commands:**
+#### 2. Configure Rish for Termux
+1. In Shizuku, tap **Use Shizuku in Terminal** and select **Export files**.
+2. Save the files to your SD card in a folder named `Ter` (e.g., `SD Card > Ter`).
+3. Open **QuickEdit** and grant the necessary permissions.
+4. Tap the three lines (menu) and navigate to `SD Card > Ter > rish`.
+5. On **Line 24**, find the variable `PKG=""` and change it to:
+   `PKG="com.termux"`
+6. Tap the **Disk icon** (Save) and then the **X** to close the file.
+7. Restart Shizuku to apply changes and ensure Wireless Debugging is still active.
+8. In Shizuku, go to **Authorized applications** and enable **Termux**.
+
+#### 3. Run the Debloater in Termux
+1. Open **Termux**.
+2. Type `cd /storage` and press **Enter**.
+3. Type `ls` and press **Enter**. You will see a series of numbers (e.g., `1234-ABCD`) which is your SD card's ID.
+4. Navigate to your folder by typing (replace `1234-ABCD` with your ID):
+   `cd /storage/1234-ABCD/Ter`
+5. Run the rish script by typing:
+   `sh rish`
+   *Press Enter and grant Shizuku access if prompted.*
+6. Now, **Copy and Paste** the following block of commands into Termux to disable the bloatware:
 
 ```bash
 pm disable-user --user 0 com.android.dreams.basic
@@ -174,8 +194,19 @@ pm disable-user --user 0 com.mediatek.mtklogger
 pm disable-user --user 0 com.mediatek.gnssdebugreport
 pm disable-user --user 0 com.mediatek.batterywarning
 ```
+7. **Restart your device.** The process is complete!
 
-4. **Restart your device.** Your PAM is now cleaner and faster than ever!
+
+
+### 💡 Pro Tip: Speed up ES-DE Startup
+If your collection is massive and you want ES-DE to open instantly, you can disable the automatic startup scan:
+
+1. Go to **ES-DE Menu** > **Other Settings**.
+2. Set **Only show games from gamelist** to **On**.
+
+> [!NOTE]
+> If you add new games later, you must manually scan via **Menu** > **Utilities** > **Rescan ROM Directory**.
+
 
 ## ⚠️ Disclaimer
 
