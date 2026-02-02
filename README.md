@@ -137,7 +137,6 @@ Go to **Settings > System > Developer Options**:
 * **Window/Transition/Animator Scale:** Set all to **0x (Off)**.
 * **Background Process Limit:** Set to **2**.
 * **Disable HW Overlays:** **ON**.
-* **Force GPU Rendering:** **ON**.
 
 ### **2. Battery Health (AccuBattery)**
 1. Open **AccuBattery**.
