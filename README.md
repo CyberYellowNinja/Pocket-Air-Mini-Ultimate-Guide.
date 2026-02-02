@@ -146,7 +146,7 @@ Go to **Settings > System > Developer Options**:
 
 ---
 
-### 🥷 Phase 8: The Dark Arts (System Debloating)
+## 🥷 Phase 8: The Dark Arts (System Debloating)
 This stage will disable unnecessary system background processes to free up RAM and CPU cycles. We will use **Shizuku**, **QuickEdit**, and **Termux**.
 
 #### 1. Setup Shizuku
@@ -195,7 +195,7 @@ pm disable-user --user 0 com.mediatek.mtklogger
 pm disable-user --user 0 com.mediatek.gnssdebugreport
 pm disable-user --user 0 com.mediatek.batterywarning
 ```
-8. **​Restart your device. You will notice improved battery life and more stable performance due to reduced background CPU activity.
+8. **​Restart your device. You will notice improved battery life and more stable performance due to reduced background CPU activity.**
 
 
 
