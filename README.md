@@ -162,8 +162,8 @@ This stage will disable unnecessary system background processes to free up RAM a
 2. Save the files to your SD card in a folder named `Ter` (e.g., `SD Card > Ter`).
 3. Open **QuickEdit** and grant the necessary permissions.
 4. Tap the three lines (menu) and navigate to `SD Card > Ter > rish`.
-5. On **Line 24**, find the variable `PKG=""` and change it to:
-   `PKG="com.termux"`
+5. On **Line 24**, find the variable `"PKG"` and change it to:
+   `"com.termux"`
 6. Tap the **Disk icon** (Save) and then the **X** to close the file.
 7. Restart Shizuku to apply changes and ensure Wireless Debugging is still active.
 
