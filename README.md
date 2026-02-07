@@ -199,7 +199,19 @@ pm disable-user --user 0 com.mediatek.batterywarning
 ```
 9. **​Restart your device. You will notice improved battery life and more stable performance due to reduced background CPU activity.**
 
+## 📱 Phase 9: Removing Touch Overlays
 
+Standalone emulators often enable touch icons by default, which can be distracting on a controller-first handheld.  
+Use the following paths to hide them for a clean, console-like experience:
+
+- **Dolphin (GC/Wii):** While in-game → Open menu → Overlay Controls → Toggle Controls → Unselect All
+- **NetherSX2 / AetherSX2 (PS2):** Swipe left panel → Controller Settings → Touchscreen → Touchscreen Controller View → None
+- **DuckStation (PS1):** Controller Settings → Auto-Hide Touchscreen Controller → ON
+- **Mupen64Plus FZ (N64):** Settings → Profiles → Touchscreen → New → Name it "Hidden" → Tap screen → Exit → Set active profile to "Hidden"
+- **MelonDS (DS):** Settings → Input → Show soft input → OFF
+- **Azahar / Citra (3DS):** During gameplay → Swipe down → 3-dot menu → Disable Show Overlay
+- **Vita3K (Vita):** Controls → Overlay → Untick “Show gamepad overlay ingame”
+- **Yaba Sanshiro 2 (Saturn):** Settings → Input Device → Edit On-Screen Pad → Set Transparency to 0
 
 ### 💡 Pro Tip: Speed up ES-DE Startup
 
