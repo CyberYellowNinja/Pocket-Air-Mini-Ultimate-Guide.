@@ -99,6 +99,9 @@ Open RetroArch and grant permissions.
     * Dual Core: **ON** | Emulated CPU Clock Speed: **60% – 70%** 
 * **Advanced:**
     * Backend Multithreading: **ON** | Shader Cache: **ON** | V-Sync: **OFF**
+      > [!TIP]
+> **Mario Kart Double Dash Fix:** If you experience a blue overlay during gameplay, it is a Vulkan EFB quirk. To fix it, go to **Dolphin Hacks** and disable (**OFF**) the setting **"Store EFB Copies to Texture Only"**.
+
 * **Wii Controls (FPS Setup):** Extension: **Classic**. Map ZL/ZR to L1/R1 and Triggers to L2/R2.
 
 ### **3. NetherSX2 (PlayStation 2)**
