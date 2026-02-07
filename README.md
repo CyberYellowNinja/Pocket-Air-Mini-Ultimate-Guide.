@@ -85,15 +85,39 @@ Open RetroArch and grant permissions.
 
 ### **2. Dolphin (GameCube & Wii)**
 * **Paths:** Add `SD Card > ROMS > GC` and `Wii` folders.
-* **Graphics:** Video Backend: **Vulkan** | Shader Compilation: **Skip Drawing** | Compile Shaders Before Starting: **ON**.
-* **Resolution:** Internal Resolution: **2x Native**.
-* **Performance:** Config > Advanced > Emulated CPU Clock Speed: **60%-70%**.
+* **Graphics:**
+    * Video Backend: **Vulkan**
+    * Shader Compilation: **Skip Drawing (ON)** | **Compile Shaders Before Starting (ON)**
+    * Internal Resolution: **2x Native**
+* **Enhancements:**
+    * Anti-Aliasing: **OFF** | Anisotropic Filtering: **2x ή OFF**
+    * Scaled EFB Copy: **ON** | Per-Pixel Lighting: **OFF** | Force Texture Filtering: **OFF**
+* **Hacks:**
+    * Skip EFB Access from CPU: **ON** | Ignore Format Changes: **ON**
+    * Store EFB Copies to Texture Only: **ON** | Defer EFB Copies to RAM: **ON**
+* **Performance / CPU:**
+    * Dual Core: **ON** | Emulated CPU Clock Speed: **60% – 70%** 
+* **Advanced:**
+    * Backend Multithreading: **ON** | Shader Cache: **ON** | V-Sync: **OFF**
 * **Wii Controls (FPS Setup):** Extension: **Classic**. Map ZL/ZR to L1/R1 and Triggers to L2/R2.
 
 ### **3. NetherSX2 (PlayStation 2)**
 * **BIOS:** Import from `SD Card > BIOS`.
-* **Graphics:** Renderer: **Vulkan** (or OpenGL if Vulkan glitches) | Threaded Presentation: **ON**.
-* **Underclocking (Crucial):** Settings > System > EE Cycle Rate: **75%** | EE Cycle Skip: **1** | Multi-threaded VU1: **ON**.
+* **Graphics:**
+    * Renderer: **Vulkan**
+    * Threaded Presentation: **ON**
+    * Blending Accuracy: **Basic**
+    * Mipmapping: **Automatic**
+* **System (Underclocking):**
+    * EE Cycle Rate: **75% (-1)**
+    * EE Cycle Skip: **1 (Mild Skip)**
+    * Multi-threaded VU1: **ON**
+    * Instant VU1: **OFF**
+    * Fast CDVD: **ON**
+* **Speedhacks:**
+    * INTC Spin Detection: **ON**
+    * Wait Loop Detection: **ON**
+    * mVU Flag Hack: **ON**
 * **Controls:** Controller Port 1 > Automatic Mapping.
 
 ### **4. PPSSPP (PSP)**
