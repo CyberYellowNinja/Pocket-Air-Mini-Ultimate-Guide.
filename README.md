@@ -254,6 +254,106 @@ If your collection is massive and you want ES-DE to open instantly, you can disa
 > [!NOTE]
 > If you add new games later, you must manually scan via **Menu** > **Utilities** > **Rescan ROM Directory**.
 
+## 📜 Appendix: Must-Play Games per System
+These are curated lists of **must-have games** that run well on the Pocket Air Mini. Focus on legal backups you own. Performance tiers are based on practical testing with recommended configurations. Individual results may vary depending on scene complexity, emulator version, firmware, and device configuration.
+
+- **Tier A**: Full speed (stable, minimal tweaks).
+- **Tier B**: Minor drops (playable, some tweaks).
+- **Tier C**: Playable with tweaks (demanding scenes, underclock).
+
+**Summary:**
+PS1 (DuckStation – Mostly Tier A)
+
+| Game                  | Why Must-Play                  | Tier / Notes |
+|-----------------------|--------------------------------|--------------|
+| Crash Bandicoot 2/3   | Iconic platformer, fun levels | A, 3-4x res |
+| Final Fantasy VII/IX  | Epic RPG story                | A, PGXP ON  |
+| Resident Evil 2       | Survival horror classic       | A           |
+| Castlevania: Symphony of the Night | Metroidvania masterpiece | A           |
+| Metal Gear Solid      | Stealth action pioneer        | A           |
+| Tony Hawk's Pro Skater 2 | Skateboarding fun            | A           |
+| Parasite Eve          | Horror RPG                    | A           |
+
+**Summary:**
+PS2 (NetherSX2 – Mix A/B/C)
+
+| Game                  | Why Must-Play                  | Tier / Notes |
+|-----------------------|--------------------------------|--------------|
+| God of War (1/2)      | Epic action-adventure         | B, EE -1    |
+| Metal Gear Solid 3: Snake Eater | Stealth masterpiece      | B           |
+| Burnout 3: Takedown   | Racing chaos                  | A           |
+| Persona 4             | RPG with deep story           | B           |
+| Bully                 | Open-world school adventure   | A           |
+| Katamari Damacy       | Unique rolling fun            | A           |
+| SSX 3                 | Snowboarding tricks           | A           |
+
+**Summary:**
+PSP (PPSSPP – Mostly A)
+
+| Game                  | Why Must-Play                  | Tier / Notes |
+|-----------------------|--------------------------------|--------------|
+| God of War: Chains of Olympus | Action epic              | A, 2x res   |
+| Crisis Core: Final Fantasy VII | RPG prequel             | A           |
+| Persona 3 Portable    | Deep RPG/social sim           | A           |
+| Metal Gear Solid: Peace Walker | Stealth co-op           | A           |
+| Def Jam: Fight for NY – The Takeover | Fighting with rappers | A           |
+| Jeanne d'Arc          | Tactical RPG                  | A           |
+| Castlevania: The Dracula X Chronicles | Action remake  | A           |
+
+**Summary:**
+GameCube (Dolphin – Mix A/B)
+
+| Game                  | Why Must-Play                  | Tier / Notes |
+|-----------------------|--------------------------------|--------------|
+| Super Smash Bros. Melee | Fighting party            | A, 2x native |
+| The Legend of Zelda: Wind Waker | Adventure open-sea    | B, Skip EFB ON |
+| Mario Kart: Double Dash!! | Racing fun              | A (OpenGL if Vulkan EFB issues) |
+| Super Mario Sunshine  | Platformer with water mechanics | B           |
+| Animal Crossing       | Life sim relaxing             | A           |
+| Tales of Symphonia    | RPG with co-op                | B           |
+| Eternal Darkness      | Horror mind-bending           | A           |
+
+**Summary:**
+Wii (Dolphin – Mix B/C)
+
+| Game                  | Why Must-Play                  | Tier / Notes |
+|-----------------------|--------------------------------|--------------|
+| Super Mario Galaxy (1/2) | Platformer masterpiece     | B, Hybrid shaders |
+| New Super Mario Bros. Wii | Side-scroller co-op      | A           |
+| Mario Kart Wii        | Racing with motion (optional) | B           |
+| The Legend of Zelda: Twilight Princess | Epic adventure | B           |
+| Punch-Out!!           | Boxing fun                    | A           |
+| Harvest Moon: Animal Parade | Farming sim          | A           |
+
+**Summary:**
+N64 (Mupen64Plus FZ – Mostly A)
+
+| Game                  | Why Must-Play                  | Tier / Notes |
+|-----------------------|--------------------------------|--------------|
+| The Legend of Zelda: Ocarina of Time | Timeless adventure   | A, GLideN64 |
+| Super Mario 64        | Platforming pioneer            | A           |
+| GoldenEye 007         | FPS classic                   | A           |
+| Mario Kart 64         | Racing party                  | A           |
+| The Legend of Zelda: Majora's Mask | Dark time-loop     | A           |
+| Donkey Kong 64        | Collectathon                  | A           |
+| Star Fox 64           | Rail shooter                  | A           |
+| Kirby 64: The Crystal Shards | Cute platformer     | A           |
+
+**Summary:**
+DS/3DS (MelonDS/Azahar – A for DS, B for 3DS)
+
+| Game                  | Why Must-Play                  | Tier / Notes |
+|-----------------------|--------------------------------|--------------|
+| New Super Mario Bros. (DS) | Side-scroller classic    | A           |
+| Mario & Luigi: Bowser's Inside Story (DS) | RPG humor        | A           |
+| The Legend of Zelda: A Link Between Worlds (3DS) | Top-down adventure | B, 2x res   |
+| Kirby Triple Deluxe (3DS) | Platformer fun          | A           |
+| Bravely Default (3DS) | RPG turn-based                | B           |
+| Super Street Fighter IV 3D (3DS) | Fighting          | A           |
+| Azure Striker Gunvolt (3DS) | Action platformer     | A           |
+
+> [!IMPORTANT]
+> **Legal Note:** Only use ROMs from games you own.
 
 ## ⚠️ Disclaimer
 
