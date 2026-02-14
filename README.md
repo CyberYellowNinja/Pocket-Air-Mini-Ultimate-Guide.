@@ -132,7 +132,8 @@ Open RetroArch and grant permissions.
 * **Controller:** Set Touchscreen View to **None**.
 
 ### **6. Azahar (3DS)**
-* **Graphics:** API: **Vulkan** | Resolution: **3x**.
+* **Graphics:** API: **Vulkan** | Resolution: **3x (lighter titles) / 2x (heavier titles)**.
+* **Performance:** Async Shader Compilation: **Enabled** | Disk Shader Cache: **Enabled** | Accurate Multiplication: **Disabled**.
 * **Mapping:** Screen Swap: **L3** | Cycle Layout: **R3**.
 
 ### **7. MelonDS (DS) & Mupen64Plus FZ (N64)**
