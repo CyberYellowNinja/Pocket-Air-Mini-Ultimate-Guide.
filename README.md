@@ -7,7 +7,7 @@ Welcome to the ultimate guide for transforming your Ayaneo Pocket Air Mini (PAM)
 ### ☕ Support My Work
 If this guide saves you hours of frustration and helps you build your dream handheld, consider buying me a coffee!
 
-<a href="https://www.buymeacoffee.com/hackerman_0" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
+<a href="https://www.buymeacoffee.com/cyberyellowninja" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
 
 <a href="https://ko-fi.com/cyberyellowninja" target="_blank">
   <img src="https://storage.ko-fi.com/cdn/kofi5.png?v=3"
@@ -373,7 +373,7 @@ This guide is for educational purposes only.
 ### ☕ Final Support
 If this "Zero to Hero" guide helped you build the perfect handheld, consider supporting my work!
 
-<a href="https://www.buymeacoffee.com/hackerman_0" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
+<a href="https://www.buymeacoffee.com/cyberyellowninja" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
 
 <a href="https://ko-fi.com/cyberyellowninja" target="_blank">
   <img src="https://storage.ko-fi.com/cdn/kofi5.png?v=3"
