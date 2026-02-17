@@ -179,6 +179,74 @@ Go to **Settings > System > Developer Options**:
 
 ---
 
+---
+
+## 🚀 Phase 7.5: Performance & Audio Optimization Profiles
+
+This section applies calibrated thermal and audio tuning for stable high-performance operation on the Ayaneo Pocket Air Mini.
+
+---
+
+### 🔥 1. Thermal Profile — Custom Fan Curve
+
+**Objective:** Maintain sustained performance under load while keeping acoustic output controlled.
+
+| Temperature (°C) | Fan Speed (%) |
+|------------------|---------------|
+| 0–45             | 25            |
+| 55               | 40            |
+| 65               | 60            |
+| 75               | 80            |
+| ≥83              | 100           |
+
+**Apply:**  
+AYASpace → Fan Settings → Custom → Drag points exactly as shown → Save
+
+---
+
+### 🔊 2. Audio Profile — Master EQ v1.3
+
+**Objective:** Improve clarity and perceived bass response on integrated downward-firing speakers while maintaining safe headroom.
+
+#### 10-Band Graphic EQ
+
+| Frequency | Gain (dB) |
+|-----------|-----------|
+| 31 Hz     | 0.0       |
+| 62 Hz     | +2.5      |
+| 125 Hz    | +3.0      |
+| 250 Hz    | +1.5      |
+| 500 Hz    | -1.5      |
+| 1K Hz     | 0.0       |
+| 2K Hz     | +2.5      |
+| 4K Hz     | +3.0      |
+| 8K Hz     | +2.0      |
+| 16K Hz    | +1.0      |
+
+#### Global Parameters
+- **Input Gain:** -2.0 dB  
+- **Bass Gain:** +4.0 dB @ 120 Hz  
+
+**Apply:**  
+Equalizer → "+" → Create preset → Name: `Master EQ v1.3` → Enter values → Confirm
+
+> Recommended for 70–85% volume range.  
+> Reduce Bass Gain slightly for extended near-maximum volume sessions.
+
+---
+
+### ✔ Validation Checklist
+
+After applying both profiles:
+
+- Fan ramps progressively under load  
+- No sudden full-speed spikes during light gaming  
+- No audible distortion during heavy scenes  
+- Clear mids and highs without harshness  
+- Stable thermals during extended play sessions  
+
+---
+
 ## 🥷 Phase 8: The Dark Arts (System Debloating)
 This stage will disable unnecessary system background processes to free up RAM and CPU cycles. We will use **Shizuku**, **QuickEdit**, and **Termux**.
 
