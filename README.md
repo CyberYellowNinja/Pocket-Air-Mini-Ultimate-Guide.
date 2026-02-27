@@ -88,24 +88,53 @@ Open RetroArch and grant permissions.
 * **Speed Hack:** Open `Android/data/com.retroarch.aarch64/files/retroarch.cfg` with **QuickEdit**. Add `input_threaded = "false"` at the bottom.
 * **Shaders:** Use `LCD-Grid-V2` for Handhelds and `CRT-Lottes` for TV consoles. Avoid "Mega Bezel".
 
-### **2. Dolphin (GameCube & Wii)**
-* **Paths:** Add `SD Card > ROMS > GC` and `Wii` folders.
-* **Graphics:**
-    * Video Backend: **Vulkan**
-    * Shader Compilation: **Skip Drawing (ON)** | **Compile Shaders Before Starting (ON)**
-    * Internal Resolution: **2x Native**
-* **Enhancements:**
-    * Anti-Aliasing: **OFF** | Anisotropic Filtering: **2x ή OFF**
-    * Scaled EFB Copy: **ON** | Per-Pixel Lighting: **OFF** | Force Texture Filtering: **OFF**
-* **Hacks:**
-    * Skip EFB Access from CPU: **ON** | Ignore Format Changes: **ON**
-    * Store EFB Copies to Texture Only: **ON** | Defer EFB Copies to RAM: **ON**
-* **Performance / CPU:**
-    * Dual Core: **ON** | Emulated CPU Clock Speed: **60% – 70%** 
-* **Advanced:**
-    * Backend Multithreading: **ON** | Shader Cache: **ON** | V-Sync: **OFF**
-      > [!TIP]
-> **Mario Kart Double Dash Fix:** If you experience a blue overlay during gameplay, it is a Vulkan EFB quirk. To fix it, go to **Dolphin Hacks** and disable (**OFF**) the setting **"Store EFB Copies to Texture Only"**.
+### 2. Dolphin (GameCube & Wii)
+
+#### Config:
+
+##### General
+- **Dual Core:** ON
+
+##### Advanced
+- **Override Emulated CPU Clock Speed:** ON  
+- **Emulated CPU Clock Speed:** 60% – 70%
+
+##### Paths
+- Add:
+  - `SD Card > ROMS > GC`
+  - `SD Card > ROMS > Wii`
+
+#### Graphics:
+
+##### General
+- **Video Backend:** Vulkan
+- **Shader Compilation:**
+  - Skip Drawing: ON
+  - Compile Shaders Before Starting: ON
+
+##### Enhancements
+- **Internal Resolution:** 2x Native
+- **Anti-Aliasing:** OFF
+- **Anisotropic Filtering:** 2x or OFF
+- **Arbitrary Mipmap Detection:** ON
+- **Scaled EFB Copy:** ON
+- **Per-Pixel Lighting:** OFF
+- **Texture Filtering:** Default
+
+##### Hacks
+- **Skip EFB Access from CPU:** ON
+- **Ignore Format Changes:** ON
+- **Store EFB Copies to Texture Only:** ON
+- **Defer EFB Copies to RAM:** ON
+
+##### Advanced
+- **Backend Multithreading:** ON
+- **Shader Cache:** ON
+- **V-Sync:** OFF
+
+> [!TIP]
+> **Mario Kart Double Dash Fix:**  
+> If you experience a blue overlay during gameplay (Vulkan EFB quirk), go to **Dolphin → Graphics → Hacks** and disable **"Store EFB Copies to Texture Only"**.
 
 * **Wii Controls (FPS Setup):** Extension: **Classic**. Map ZL/ZR to L1/R1 and Triggers to L2/R2.
 
