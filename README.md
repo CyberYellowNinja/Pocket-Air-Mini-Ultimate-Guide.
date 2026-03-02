@@ -88,6 +88,36 @@ Open RetroArch and grant permissions.
 * **Speed Hack:** Open `Android/data/com.retroarch.aarch64/files/retroarch.cfg` with **QuickEdit**. Add `input_threaded = "false"` at the bottom.
 * **Shaders:** Use `LCD-Grid-V2` for Handhelds and `CRT-Lottes` for TV consoles. Avoid "Mega Bezel".
 
+  > [!TIP]
+> CRT-Lottes is visually accurate but heavier.
+>
+> For demanding systems (N64 / Dreamcast), consider using:
+> - CRT-Lottes-fast
+> - Lightweight shaders
+>
+> Performance should take priority over visual effects on heavier platforms.
+
+#### 🎨 Community Shader Recommendations (Optional)
+
+If you want to experiment beyond the default presets:
+
+**General CRT Options**
+- `crt-geom-mini` → Lightweight, great overall look  
+- `crt-geom` → Better image quality (uses more power)  
+- `zfast-crt-composite` → Excellent for Genesis / Mega Drive  
+- `zfast-crt-svideo` → Softer, blurrier authentic CRT look  
+- `crt-pi` → Makes arcade titles pop while remaining lightweight  
+
+**3D Systems**
+- `crt-newpixie-mini` → Recommended for PS1 and other early 3D systems  
+
+**Handheld Systems**
+- **GBA:** `quilez interpolation` + `lcdx3`  
+- **Game Boy DMG:** `gb-palette` + `lcdx3`  
+- **Game Boy Color:** `pixel transparency` + `lcdx3`  
+
+> These are visual preference options and may slightly impact performance.
+
 ### **2. Dolphin (GameCube & Wii)**
 * **Paths:** Add `SD Card > ROMS > GC` and `Wii` folders.
 * **Graphics:**
@@ -104,10 +134,48 @@ Open RetroArch and grant permissions.
     * Dual Core: **ON** | Emulated CPU Clock Speed: **60% – 70%** 
 * **Advanced:**
     * Backend Multithreading: **ON** | Shader Cache: **ON** | V-Sync: **OFF**
+   
       > [!TIP]
 > **Mario Kart Double Dash Fix:** If you experience a blue overlay during gameplay, it is a Vulkan EFB quirk. To fix it, go to **Dolphin Hacks** and disable (**OFF**) the setting **"Store EFB Copies to Texture Only"**.
 
 * **Wii Controls (FPS Setup):** Extension: **Classic**. Map ZL/ZR to L1/R1 and Triggers to L2/R2.
+
+  ---
+
+## 🔧 Community Contribution – Dolphin Enhancement Notes
+
+Additional refinement based on community testing.
+
+### Arbitrary Mipmap Detection
+
+Enable this **only if** you notice:
+
+- Texture shimmer
+- Flickering textures
+- Surfaces that appear overly sharp or “sparkly” during movement
+
+These issues can occur in certain titles due to missing mipmap detection in Vulkan.
+
+**Fix:**
+
+Dolphin → Graphics → Enhancements  
+→ Enable **Arbitrary Mipmap Detection**
+
+⚠️ Leave this OFF by default.  
+It may slightly impact performance and is not needed for most games.
+
+---
+
+### Updated Guidance
+
+Default Recommendation:
+- Keep **Arbitrary Mipmap Detection = OFF**
+
+Conditional Use:
+- Enable only when visual artifacts appear.
+
+This preserves performance-first behavior while allowing targeted visual correction when needed.
+
 
 ### **3. NetherSX2 (PlayStation 2)**
 * **BIOS:** Import from `SD Card > BIOS`.
@@ -127,6 +195,35 @@ Open RetroArch and grant permissions.
     * Wait Loop Detection: **ON**
     * mVU Flag Hack: **ON**
 * **Controls:** Controller Port 1 > Automatic Mapping.
+
+#### 🎮 Game-Specific Optimization: Fatal Frame Series
+
+Fatal Frame titles are among the most demanding PS2 games on the Pocket Air Mini due to heavy post-processing and alpha effects.
+
+Use the following tested combo for stable performance:
+
+##### Graphics
+- Renderer: Vulkan  
+- Blending Accuracy: Basic  
+- Mipmapping: Automatic  
+
+##### System
+- EE Cycle Rate: 75% (-1)  
+- EE Cycle Skip: 1 (Mild Skip)  
+- Multi-threaded VU1: ON  
+
+##### Speedhacks
+- INTC Spin Detection: ON  
+- Wait Loop Detection: ON  
+- mVU Flag Hack: ON  
+
+##### Advanced (Performance Boost)
+- Disable Depth Emulation: ON  
+- GPU Palette Conversion: OFF  
+
+This combo reduces GPU overhead while preserving visual integrity in gameplay-heavy scenes.
+
+> Note: Minor slowdowns may still occur during intense camera effects — this is expected.
 
 ### **4. PPSSPP (PSP)**
 * **Graphics:** Backend: **Vulkan** | Rendering Resolution: **2x** | Frame Skipping: **1** | Auto Frameskip: **ON**.
@@ -164,6 +261,14 @@ Make your collection look professional and set ES-DE as your permanent home.
 
 ---
 
+> [!NOTE]
+> Standalone emulators are intended to be launched directly from ES-DE system tabs.
+> The separate Emulators tab exists only for configuration and maintenance.
+>
+> To launch games directly:
+> Start → Other Settings → Alternative Emulators
+> Assign your standalone emulator per system.
+
 ## ⚡ Phase 7: System Optimization & Battery Health
 
 ### **1. Developer Performance Tweaks**
@@ -171,6 +276,11 @@ Go to **Settings > System > Developer Options**:
 * **Window/Transition/Animator Scale:** Set all to **0x (Off)**.
 * **Background Process Limit:** Set to **2**.
 * **Disable HW Overlays:** **ON**.
+
+   > [!NOTE]
+> On Android 11, Background Process Limit resets after a full shutdown (cold boot).  
+> Sleep mode does not reset it.  
+> If you power the device off completely, you will need to set it again.
 
 ### **2. Battery Health (AccuBattery)**
 1. Open **AccuBattery**.
@@ -233,6 +343,9 @@ Equalizer → "+" → Create preset → Name: `Master EQ v1.3` → Enter values 
 > Recommended for 70–85% volume range.  
 > Reduce Bass Gain slightly for extended near-maximum volume sessions.
 
+> [!NOTE]
+> Some Android 11 firmware builds do not automatically re-apply EQ presets after a full shutdown.
+> You may need to manually re-enable the preset after reboot.
 ---
 
 ### ✔ Validation Checklist
@@ -299,6 +412,58 @@ pm disable-user --user 0 com.mediatek.gnssdebugreport
 pm disable-user --user 0 com.mediatek.batterywarning
 ```
 9. **​Restart your device. You will notice improved battery life and more stable performance due to reduced background CPU activity.**
+
+## 🧹 Additional Debloat List (Optional)
+
+Safe to disable on a gaming-only device.  
+Do **NOT** apply if you use enterprise features, contact/calendar sync, MIDI, or advanced networking.
+
+### Disable via Termux:
+```bash
+pm disable-user --user 0 com.android.pacprocessor  
+pm disable-user --user 0 com.android.proxyhandler  
+pm disable-user --user 0 com.android.carrierconfig  
+pm disable-user --user 0 com.android.ons  
+pm disable-user --user 0 com.android.simappdialog  
+pm disable-user --user 0 com.google.android.syncadapters.contacts  
+pm disable-user --user 0 com.google.android.syncadapters.calendar  
+pm disable-user --user 0 com.android.managedprovisioning  
+pm disable-user --user 0 com.google.mainline.telemetry  
+pm disable-user --user 0 com.android.bluetoothmidiservice  
+pm disable-user --user 0 com.android.soundpicker  
+pm disable-user --user 0 com.android.music  
+pm disable-user --user 0 com.android.providers.partnerbookmarks
+```
+
+### ♻ Undo Debloat (Restore Disabled Packages)
+
+If something stops working after debloating, you can restore any removed system package.
+
+#### Command:
+```
+pm enable package.name
+```
+
+#### Example:
+```
+pm enable com.google.android.ims
+```
+
+> Reboot the device after restoring any package.
+
+> [!NOTE]
+> Debloating is persistent.
+> Disabled packages remain disabled across reboots.
+>
+> They will only return if:
+> - A factory reset is performed
+> - A system update replaces them
+> - You manually re-enable them
+>
+> Root is not required.
+>
+> Debloating mainly improves long-session stability rather than raw FPS.
+> If your system is already stable, this phase is optional.
 
 ## 📱 Phase 9: Removing Touch Overlays
 
@@ -436,7 +601,17 @@ This guide is for educational purposes only.
 * **Copyright:** This guide does not provide, host, or link directly to copyrighted ROMs or BIOS files. Emulation is a complex legal area; ensure you own physical copies of the games you emulate and comply with your local laws.
 * **Trademarks:** All product names, logos, and brands (Ayaneo, Nintendo, Sony, etc.) are property of their respective owners.
 
+## 🤝 Community Contributions & Credits
 
+This guide has been shaped and improved through valuable community input.
+
+Special thanks to:
+
+- **Nikolai Trukhin (CoolONEOfficial)** — Dolphin configuration insights and optimization contributions.
+- **uriuri89** — Community shader recommendations.
+- **hardy272** — Additional debloat package suggestions.
+
+Community feedback continues to help refine performance, stability, and usability across different setups.
 
 ### ☕ Final Support
 If this "Zero to Hero" guide helped you build the perfect handheld, consider supporting my work!
