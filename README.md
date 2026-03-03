@@ -277,7 +277,7 @@ Go to **Settings > System > Developer Options**:
 * **Background Process Limit:** Set to **2**.
 * **Disable HW Overlays:** **ON**.
 
-   > [!NOTE]
+> [!NOTE]
 > On Android 11, Background Process Limit resets after a full shutdown (cold boot).  
 > Sleep mode does not reset it.  
 > If you power the device off completely, you will need to set it again.
